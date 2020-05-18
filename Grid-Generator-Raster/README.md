@@ -18,3 +18,24 @@ The tool generates a file in the MBTiles format which can be directly imported i
 	- php generate.grid.php
 
 	- Rename the output.mbtiles file to something more useful and copy it to ForeFlight
+
+#References
+
+https://imagemagick.org/script/convert.php
+https://imagemagick.org/script/command-line-options.php#draw
+https://www.maptiler.com/
+https://qgis.org/en/site/forusers/alldownloads.html
+http://www.fmwconcepts.com/imagemagick/grid/index.php
+https://github.com/UrbanSystemsLab/raster-to-mbtiles
+https://tilemill-project.github.io/tilemill/docs/mac-install/
+https://github.com/ecometrica/gdal2mbtiles
+https://github.com/mapbox/mapbox-studio-classic
+https://github.com/joe-akeem/gdal2mbtiles-docker
+https://github.com/ecometrica/gdal2mbtiles
+https://gdal.org/programs/gdal_translate.html
+https://gis.stackexchange.com/questions/159004/creating-geotiff-from-tiff-using-gdal
+https://gis.stackexchange.com/questions/307933/how-to-create-geotiff-from-image-and-utm-coordinates
+https://gdal.org/programs/gdaladdo.html
+https://github.com/OSGeo/gdal/tree/master/gdal/docker
+https://gdal.org/drivers/raster/mbtiles.html
+
