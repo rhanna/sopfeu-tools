@@ -1,0 +1,46 @@
+17,118,CYTH,5548.28,-9751.75
+448,464,CYHU,4531.08,-7325.02
+333,86,CYPH,5828.32,-7804.62
+454,67,CYVP,5805.70,-6825.33
+251,549,CYZR,4259.98,-8218.57
+
+
+
+
+# x y easting northing
+
+#CYHU
+448 464 5686.586134 45.516917
+
+
+#Churchill
+96 50 5665.924754 58.748288
+
+
+#Attawapsikat
+260 245 5677.568653 52.927543
+
+
+
+# CYHU
+
+# CYYQ Churchill
+96 50 
+
+# CYAT Attawapsikat
+260 245 
+
+
+
+gdal_translate -expand rgba -a_nodata 0 -of GTiff -a_srs EPSG:4326 -gcp 448 464 45.5188 -73.4172 -gcp 96 50 58.7427 -94.0772 -gcp 260 245 52.9275 -82.4319 Latest-gfacn33_cldwx_000.png out.tiff
+
+
+# Kuujuarapiq
+-77.763548 55.281765
+
+# CYHU
+-73.413939 45.51971
+
+# Wawa
+-84.784337 47.969054
+
