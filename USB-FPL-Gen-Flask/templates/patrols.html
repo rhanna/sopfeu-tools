@@ -1,0 +1,25 @@
+
+		{% if patrols %}
+			<p><small>Dernièr mise à jour {{ patrols.last_updated_ago }} ({{ patrols.last_updated }})</small></p>
+			<div class="row">
+				<div class="col-4">
+					<div class="list-group" id="list-tab" role="tablist">
+						{% for patrol in patrols.patrols %}
+						<a class="list-group-item list-group-item-action {% if loop.index == 1 %} active show {%endif%} " id="list-{{patrol.patName}}-list" data-toggle="list" href="#list-{{patrol.patName}}" role="tab" aria-controls="{{patrol.patNam}}">{{patrol.patName}}</a>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-8">
+					<div class="tab-content" id="nav-tabContent">
+						{% for patrol in patrols.patrols %}
+						<div class="tab-pane fade {% if loop.index == 1 %} active show {%endif%} " id="list-{{patrol.patName}}" role="tabpanel" aria-labelledby="list-{{patrol.patName}}-list">
+							<p><a href="/patrol/{{patrol.patName}}">Patrol</a></p>
+							<p>{{patrol.patCoordinates}}</p>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+        {% else %}
+	        Aucune patrouille du jour n'a été trouvée.
+        {% endif %}

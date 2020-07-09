@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<flight-plan xmlns="http://www8.garmin.com/xmlschemas/FlightPlan/v1">
+<!--<created>20200709T05:23:56Z</created>-->
+<created>{{patrol.last_updated}}</created>
+<waypoint-table>
+  {% for wp in patrol.patWayPoints %}
+    <waypoint>
+        <identifier>{{wp[0]}}/{{wp[1]}}</identifier>
+        <type></type>
+        <lat>{{wp[0]}}</lat>
+        <lon>{{wp[1]}}</lon>
+    </waypoint>
+  {% endfor %}
+</waypoint-table>
+<route>
+    <route-name>PATROUILLE {{patrol.patName}}</route-name>
+
+    {% for wp in patrol.patWayPoints %}
+    <route-point>
+        <waypoint-identifier>{{wp[0]}}/{{wp[1]}}</waypoint-identifier>
+        <waypoint-type></waypoint-type>
+    </route-point>
+    {% endfor %}
+
+    <route-point>
+        <waypoint-identifier>{{patrol.patWayPoints[0][0]}}/{{patrol.patWayPoints[0][1]}}</waypoint-identifier>
+        <waypoint-type></waypoint-type>
+    </route-point>
+    
+</route>
+</flight-plan>
