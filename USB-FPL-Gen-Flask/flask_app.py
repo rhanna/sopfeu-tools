@@ -40,8 +40,7 @@ def patrol(patName):
 		if p['patName'] == patName:
 			patrol = p
 			patrols['last_updated'] = patrols['last_updated']
-			request_meta = { 'Content-Type': 'application/octet-stream', 'Content-Disposition': "attachment;filename=\"%s.FPL\"" % patName }
-			#request_meta = { 'Content-Type': 'application/xml' }
+			request_meta = { 'Content-Type': 'application/xml', 'Content-Disposition': "attachment;filename=\"%s.FPL\"" % patName }
 			return render_template( 'patrol.html', patrol = patrol ), 200, request_meta
 
 	flash( "Error! Patrol %s does not exist" % patName, 'danger' )
